@@ -254,7 +254,6 @@ function twoDimensionalArrayGenerator(){
 
 //2d appender
 function appender2(arr){
-    console.log(arr);
     s+='[';
     if(!sorted){
     for (let i = 0; i < n; i++) {
