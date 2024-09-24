@@ -8,16 +8,6 @@
         opacity: 1;
     }
 }
-@keyframes slideInRight {
-    from{
-        transform: translateX(100px);
-        opacity: 0;
-    }
-    to{
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
 
 @keyframes slideInDown {
     from{
@@ -30,13 +20,12 @@
     }
 }
 
-
 body{
-    background-color: #dde5f3;
-    filter: blur(0.3px);
+    background-color: rgb(6 6 6);
 }
 
 .headings{
+    color : rgb(255,255,255);
     font-size: 25px;
     text-align: center;
     font-family: "Caveat", cursive;
@@ -53,8 +42,9 @@ body{
 
 .inputButtons{
     cursor: pointer;
-    border-radius: 20px;
-    background-color: transparent;
+    border-radius: 8px;
+    color : white;
+    background-color: rgba(38,38,38);
     font-family: "Edu AU VIC WA NT Hand";
     font-weight:500;
     overflow: hidden;
@@ -62,12 +52,10 @@ body{
     height: 35px;
     font-size: 14px;
     margin: 10px;
-    border: 0.1px solid rgba(0, 0, 0, 0.397);
-
+    border : none;
 }
 
-.inputter{
-    border: 0.1px solid rgb(143, 143, 143);
+.twoDbox,.inputter{
     font-family: "Caveat";
     text-align: center;
     font-size: 22px;
@@ -75,26 +63,15 @@ body{
     height: 30px;
     border-radius: 5px;
     margin: 20px;
-    background-color: rgb(255, 252, 252);
+    background-color: rgba(38,38,38);
+    border : none;
+    color: white;
 }
 
-
-.inputter:hover,.inputter:active,.twoDBox:hover{
-    box-shadow: 2px 3px 0.3em  #000000  ;
-}
 .inputButtons:hover,.generateButton:hover{
-    box-shadow: 3px 5px 0.3em  #000000cb  ;
-    
+    background-color: rgb(100, 100, 100);
 }
-.twoDBox{
-    text-align: center;
-    font-family: "Caveat";
-    font-size: 22px;
-    width: 120px;
-    height: 30px;
-    border-radius: 5px;
-    border: 0.1px solid rgb(146, 146, 146);
-}
+
 
 .inputButtonsDiv{
     display: flex;
@@ -118,38 +95,41 @@ body{
 .generatorDiv{
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .generateButton{
-    background-color: #fff4b8dc;
+    cursor: pointer;
+    color: rgb(40,194,68);
+    background-color : rgb(38,38,38);
     font-family: "Edu AU VIC WA NT Hand";
     font-weight: 500;
-    font-size: 15px;
+    font-size: 17px;
     overflow: hidden;
-    border-radius: 7px;
-    height: 30px;
-    width: 90px;
-    margin-bottom: 15px;
-    border: 0.1px solid rgb(146, 146, 146);
+    border-radius: 8px;
+    height: 35px;
+    width: 100px;
+    margin-bottom: 25px;
+    border : none;
 }
 
 .generateButton:active{
     cursor: progress;
-    background-color: rgb(238, 166, 166);
+    background-color: rgb(124, 124, 124);
     opacity: 0.7;
-    transition: all 0ms ease-in;
+    transition: all 0ms ease-in-out;
 }
 
 .copyButton{
     cursor: pointer;
+    width: 1002px;
     font-family: "Edu AU VIC WA NT Hand";
     font-weight: 500;
     text-align: center;
-    border: 0.1px solid rgb(131, 131, 131) ;
-    background-color: rgb(132, 132, 182);
+    background-color: rgb(51, 51, 51,255);
     color: rgb(255, 255, 255);
-    border-radius: 10px 10px 0px 0px;
-    font-size: 17px;
+    border-radius: 7px 7px 0px 0px;
+    font-size: 15px;
 }
 
 .copyButton:active{
@@ -169,15 +149,14 @@ body{
 }
 
 .outputBox{
-    font-family: "Nanum Pen Script", cursive;
-    font-size: 24px;
-    border: 0.1px solid gray ;
-    border-radius: 0px 0px 10px 10px ;
-    width: 900px;
+    font-family: system-ui, -apple-system;
+    font-size: 15px;
+    border-radius: 0px 0px 7px 7px ;
+    width: 1000px;
     height: 400px;
     resize: none;
-    background-color: rgba(255, 255, 255, 0.863);
-    color: rgb(0, 0, 0);
+    background-color: rgba(38,38,38);
+    color: white;
 }
 
 *{
@@ -190,12 +169,10 @@ body{
     animation-duration: 1100ms;
 }
 .inputBoxes,.inputButtonsDiv{
-    animation-name: slideInRight;
+    animation-name: slideInLeft;
     animation-duration: 1000ms;
 }
 .outputBoxDiv{
-
     animation-name: slideInDown;
     animation-duration: 1000ms;
-    
 }
