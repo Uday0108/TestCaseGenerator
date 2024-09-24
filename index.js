@@ -43,13 +43,13 @@ function setString(){
     isString = !isString;
     var ele = document.getElementById('string');
     if(isString){
-        ele.style.backgroundColor = '#eb8383';
+        ele.style.backgroundColor = 'rgb(10, 132, 255)';
         isChar = false;
-        document.getElementById('duplicates').style.backgroundColor = 'transparent';
-        document.getElementById('char').style.backgroundColor = 'transparent'; 
+        document.getElementById('duplicates').style.backgroundColor = 'rgb(38,38,38)';
+        document.getElementById('char').style.backgroundColor = 'rgb(38,38,38)'; 
     }
     else
-    ele.style.backgroundColor = 'transparent';
+    ele.style.backgroundColor = 'rgb(38,38,38)';
     if(col<=0 && isString){
         alert("Enter size of String in col Box : ")
     }
@@ -59,48 +59,48 @@ function charSetter(){
     isChar = !isChar;
     var ele = document.getElementById('char');
     if(isChar){
-        ele.style.backgroundColor = '#eb8383';
+        ele.style.backgroundColor = 'rgb(10, 132, 255)';
         isString = false;
-        document.getElementById('string').style.backgroundColor = 'transparent';
-        document.getElementById('duplicates').style.backgroundColor = 'transparent';
+        document.getElementById('string').style.backgroundColor = 'rgb(38,38,38)';
+        document.getElementById('duplicates').style.backgroundColor = 'rgb(38,38,38)';
     }
     else
-    ele.style.backgroundColor = 'transparent';
+    ele.style.backgroundColor = 'rgb(38,38,38)';
 }
 
 function setCap(){
     allCap = !allCap;
     var ele = document.getElementById('allCap');
     if(allCap)
-        ele.style.backgroundColor = '#eb8383';
+        ele.style.backgroundColor = 'rgb(10, 132, 255)';
     else
-    ele.style.backgroundColor = 'transparent';
+    ele.style.backgroundColor = 'rgb(38,38,38)';
 }
 function setSmall(){
     allSmall = !allSmall;
     var ele = document.getElementById('allSmall');
     if(allSmall)
-        ele.style.backgroundColor = '#eb8383';
+        ele.style.backgroundColor = 'rgb(10, 132, 255)';
     else
-    ele.style.backgroundColor = 'transparent';
+    ele.style.backgroundColor = 'rgb(38,38,38)';
 }
 
 function setSpecial(){
     special = !special;
     var ele  = document.getElementById('special');
     if(special)
-        ele.style.backgroundColor = '#eb8383';
+        ele.style.backgroundColor = 'rgb(10, 132, 255)';
     else
-    ele.style.backgroundColor = 'transparent';
+    ele.style.backgroundColor = 'rgb(38,38,38)';
 }
 
 function set2DimeArray(){
     twoDime = !twoDime;
     var ele = document.getElementById('twoDbutton');
     if(twoDime)
-        ele.style.backgroundColor = '#eb8383';
+        ele.style.backgroundColor = 'rgb(10, 132, 255)';
     else
-    ele.style.backgroundColor = 'transparent';
+    ele.style.backgroundColor = 'rgb(38,38,38)';
 
     if( twoDime && col<=0){
         alert("Enter column's in col Box")
@@ -113,15 +113,15 @@ function sorttedArray(){
     sorted = !sorted;
     var ele = document.getElementById('sorted');
     if(sorted)
-        ele.style.backgroundColor = '#eb8383';
+        ele.style.backgroundColor = 'rgb(10, 132, 255)';
     else
-    ele.style.backgroundColor = 'transparent';
+    ele.style.backgroundColor = 'rgb(38,38,38)';
     
 }
 
 function dupliatesSetter(){
     if(isChar || isString){
-        document.getElementById('duplicates').style = 'transparent';
+        document.getElementById('duplicates').style = 'rgb(38,38,38)';
         return;
     }
     if(!isChar && !isString)
@@ -129,10 +129,10 @@ function dupliatesSetter(){
 
     var ele = document.getElementById('duplicates');
     if(remDuplicates){
-        ele.style.backgroundColor = '#eb8383';
+        ele.style.backgroundColor = 'rgb(10, 132, 255)';
     }
     else{
-        ele.style.backgroundColor = 'transparent';
+        ele.style.backgroundColor = 'rgb(38,38,38)';
     }
 }
 
@@ -254,6 +254,7 @@ function twoDimensionalArrayGenerator(){
 
 //2d appender
 function appender2(arr){
+    console.log(arr);
     s+='[';
     if(!sorted){
     for (let i = 0; i < n; i++) {
@@ -416,7 +417,6 @@ function twoDCharArrayGenerator(){
 
 //-----------------------------------------------------------------
 
-//write copy code
 function copyText(){
     var ele = document.getElementById('OutPut');
     navigator.clipboard.writeText(ele.value);
